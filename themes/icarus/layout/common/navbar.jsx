@@ -30,11 +30,6 @@ class Navbar extends Component {
 
         return <nav class="navbar navbar-main">
             <div class="container">
-                <div class="navbar-brand justify-content-center">
-                    <a class="navbar-item navbar-logo" href={siteUrl}>
-                        {logo && logo.text ? logo.text : <img src={logoUrl} alt={siteTitle} height="28" />}
-                    </a>
-                </div>
                 <div class="navbar-menu">
                     {Object.keys(menu).length ? <div class="navbar-start">
                         {Object.keys(menu).map(name => {

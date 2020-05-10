@@ -1,15 +1,12 @@
 ---
 title: JavaScript 之 「垃圾回收机制」
-toc: true
-recommend: 2
 keywords: JavaScript
 thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200510102418.png'
 tags: 垃圾回收
 categories:
   - JavaScript
-date: 2019-08-21 17:43:56
+date: 2020-05-09 17:43:56
 ---
-
 
 ## 垃圾回收 Garbage Collection
 
