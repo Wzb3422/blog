@@ -1,8 +1,21 @@
-# JavaScript 之 「垃圾回收机制」
+---
+title: JavaScript 之 「垃圾回收机制」
+toc: true
+recommend: 2
+keywords: JavaScript
+thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200510102418.png'
+tags: 垃圾回收
+categories:
+  - JavaScript
+date: 2019-08-21 17:43:56
+---
+
 
 ## 垃圾回收 Garbage Collection
 
 JavaScript 具有自动垃圾回收机制，也就是说，执行环境会负责管理代码执行过程中使用的内存。而在 C/C++ 之类的语言中，开发人员的一项基本任务就是手动跟踪内存的使用情况，这是造成众多问题的一个根源。在编写 JavaScript 时，开发人员不用再关心内存使用问题，所需内存的分配与无用内存回收完全实现了自动管理。垃圾收集器会周期性的进行垃圾回收。
+
+<!-- MORE -->
 
 ## 可达性 Reachability
 
@@ -155,3 +168,8 @@ JavaScript 的基本垃圾回收算法为 「标记 - 清除」。
 <img src="https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200510013743.png" style="zoom:50%;" />
 
 这就是 JS 垃圾清除的工作原理。JavaScript 引用做了许多优化，使其运行得快，并且不应行代码执行。
+
+## 参考资料 Reference
+
++ [Garbage Collection - The JavaScript language](https://javascript.info/garbage-collection)
++ 《JavaScript 高级程序设计 第三版》

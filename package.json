@@ -12,6 +12,7 @@
     "version": "4.2.0"
   },
   "dependencies": {
+    "ali-oss": "^6.7.0",
     "bulma-stylus": "0.8.0",
     "hexo": "^4.0.0",
     "hexo-component-inferno": "^0.2.4",
