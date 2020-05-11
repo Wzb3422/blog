@@ -5,7 +5,7 @@ thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200510145459
 tags: Review
 categories:
   - Review
-date: 2020-05-11 23:03:56
+date: 2020-05-12 02:44:56
 ---
 
 「香樟祺」是南昌大学在新冠疫情期间使用的健康填报小程序，服务50000+师生，每日 PV 13 万左右。
