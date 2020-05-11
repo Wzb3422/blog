@@ -240,3 +240,136 @@ function Person(name, age, job) {
 
 ## 对象继承
 
+继承是 OO 语言中最为重要的一个概念。许多 OO 语言都支持两种继承方式：接口继承和实现继承。接口继承只继承方法签名，实现继承则继承实际的方法。ECMAScript 没有方法签名，只进行实现继承。而其实现继承主要是依靠原型链实现的。
+
+### 原型链
+
+我们首先来回忆一下构造函数、原型和实例的关系。每个构造函数都有一个原型对象，原型对象中包含一个指向构造函数的指针，而实例都包含一个指向原型对象的内部指针。如果我们让原型对象指向另一个类型的实例，而实例都包含一个指向原型对象的内部指针。如果我们又让原型对象等于另一个类型的实例。如此递进，就构成了原型和实例的链条。这就是所谓的原型链。
+
+```js
+function SuperType() {
+  this.property = true
+}
+SuperType.prototype.getSuperValue = function() {
+  return this.property
+}
+function SubType() {
+	this.subTypeProperty = false
+}
+SubType.prototype = new SuperType()
+SubType.prototype.getSubValue = function() {
+  return this.subProperty
+}
+var instance = new SubType()
+console.log(instance.getSuperValue()) // true
+```
+
+在上面的代码中，我们没有使用 SubType 默认提供的原型， 而是给它换了一个新原型。这个新原型就是 SuperType 实例。新原型不仅仅有作为 SuperType 而有的所有属性与方法，而且内部还有一个指针，指向了 SuperType 的原型。
+
+通过实现原型链，本质是扩展了原型搜索机制。
+
+如上例，调用 `instance.getSuperValue()` 会经历三个步骤：
+
+1. 搜索实例
+2. 搜索 SubType.prototype (也就是 SuperType 实例)
+
+3. 搜索 SuperType.prototype
+
+最后一步找到该方法。若是找不到属性或者方法，搜索过程会一直查询到原型链的末端。
+
+原型继承也有它存在的问题：
+
+1. 原型对象上的引用类型的值会被所有实例共享
+2. 创建自子类型时，不能向超类型的构造函数中传递参数
+
+### 借用构造函数
+
+ 在解决原型包含引用类型值的问题过程中，开发人员使用一种叫做借用构造函数的技术（有时也称经典继承）。其思想十分简单，即在子类型的构造函数中调用超类型的构造函数。
+
+```js
+function SuperType() {
+  this.colors = ['red', 'yellow', 'green']
+}
+function SubType() {
+  SuperType.call(this)
+}
+```
+
+这样，在每个实例上。都会有自己的 `colors` 属性副本了。
+
+#### 向超类传递参数
+
+相对于原型链而言，借用构造函数可以在子类的构造函数中向超类的构造函数传递参数。
+
+```js
+function SuperType() {
+  this.name = name
+}
+function SubType() {
+  SuperType.call(this, 'Bob')
+  this.age = 29
+}
+```
+
+### 组合继承
+
+有时也称伪经典继承，指的是将原型链和借用构造函数组合到一，发挥二者之长。实现思路就是使用原型链实现对原型属性和方法的继承，使用借用构造函数来实现对实例属性的继承。这样，既通过在原型上定义方法实现了函数复用，又能够保证每个实例有它自己的属性。
+
+```js
+function SuperType(name) {
+  this.colors = ['red', 'yellow', 'green']
+  this.age = name
+}
+SuperType.prototype.sayName = function() {
+  console.log(this.name)
+}
+function SubType(name, age) {
+  SuperType.call(this, name)
+  this.age = age
+}
+SubType.prototype = new SuperType()
+SubType.prototype.constructor = SuperType
+SubType.prototype.sayAge = function() {
+  console.log(this.age)
+}
+```
+
+组合继承避免了原型链和借用构造函数的缺陷，融合了它们的优点。而且，`instanceof` 和 `isPrototypeOf` 也能够识别基于组合继承创建的对象。
+
+### 原型式继承
+
+借助原型可以基于已有的对象创建新的对象。
+
+```js
+function object(o) {
+  function F() {}
+  F.prototype = o
+  return new F()
+}
+```
+
+本质上讲，该函数对传入的对象进行了一次浅拷贝。
+
+ES5 通过 `Object.create()` 方法规范了原型式继承。
+
+> Object.create(proto[, propertiesObject])
+
+使用原型式继承也要注意，引用类型的值始终会共享相应的值，
+
+### 寄生式继承
+
+思路与工厂模式类似，即创建一个仅用于封装继承过程的函数，该函数内部以某种方式来增强对象，最后返回对象。
+
+```js
+function createAnother(original) {
+  let clone = object(original)
+  clone.sayHi = function() {
+    console.log('Hi')
+  }
+  return clone
+}
+```
+
+### 寄生组合式继承
+
+即通过
