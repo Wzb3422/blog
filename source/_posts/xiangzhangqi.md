@@ -1,7 +1,7 @@
 ---
 title: 「香樟祺」小程序 - 项目 Review
 keywords: Review
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200510145459.png'
+thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/xzqsafhjasoin.png'
 tags: Review
 categories:
   - Review
@@ -34,7 +34,7 @@ UI 框架选用的是 Taro UI。这个 UI 框架也有坑。
 
 ## 项目图片
 
-<img src="https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200512004112.png" style="zoom: 33%;" />
+<img src="https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200512004112.png" style="zoom: 50%;" />
 
 ## 开发中遇到的问题
 
@@ -74,7 +74,7 @@ TaroJS 小问题比较多：
 
 辅导员端有这么一个页面，几个 Tab 对应着班级，班级下就是学生的填报情况。这里会涉及大对象数组的查询与变化。
 
-<img src="https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/IMG_20200512_024230.png" style="zoom:33%;" />
+<img src="https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/IMG_20200512_024230.png" style="zoom: 50%;" />
 
 原本这个页面每切换一个 Tab 都要卡 Loading 等好久，有时候甚至直接获取不到数据。优化过后，切换流畅。
 
@@ -120,14 +120,16 @@ TaroJS 小问题比较多：
 
   + 可是一些小的 JS 工具函数，难道还要专门做一个云函数去调用吗？那岂不是云函数调用代码比工具函数代码还多。
 
-    <img src="https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200512020321.png" style="zoom:33%;" />
+    <img src="https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200512020321.png" style="zoom: 50%;" />
 
     这段代码在几个云函数中都被复制粘贴了。。。
 
 + 云函数云端测试功能 超级超级超级超级慢🐌
+
   + 测试 getTimestamp 函数，就返回一个 时间戳，也要等好几秒。🐂
 + 云函数会该偶然性地 500
-  + 过一会就好了... 反正我啥也没改
+
++ 过一会就好了... 反正我啥也没改
 
 + 还有其他问题欢迎补充
 
