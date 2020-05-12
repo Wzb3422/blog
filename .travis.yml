@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - '13.14.0'
+
+cache:
+  directories:
+    - node_modules
+    - tools
+
+before_install:
+  - yarn install
+  - wget http://gosspublic.alicdn.com/ossutil/1.6.12/ossutil64
+  - chmod 755 ossutil64
+  - ./ossutil64 config -e "${OSS_ENDPOINT}" -i "${OSS_AKI}" -k "${OSS_AKS}"
+
+script:
+  - hexo clean
+  - hexo generate
+
+after_success:
+  - cd ./public
+  - zip -r blog.zip ./*
+  - ../ossutil64 rm oss://wzb-blog/ -r -f
+  ## 上传zip文件
+  - ../ossutil64 cp -f blog.zip oss://wzb-blog/
