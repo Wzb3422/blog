@@ -7,3 +7,6 @@ comments: false
 # About Me
 
 某 211 计算机专业在读，时长两年的前端练习生。
++ Email: wzb3422@gmail.com
++ [我的简历](https://resume.wzbspace.top)
++ [我的 GitHub](https://github.com/Wzb3422)
