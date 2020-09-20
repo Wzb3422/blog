@@ -4,14 +4,12 @@
   "private": true,
   "scripts": {
     "build": "hexo clean && hexo generate",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
+    "start": "hexo server"
   },
   "hexo": {
-    "version": "4.2.0"
+    "version": "4.2.1"
   },
   "dependencies": {
-    "ali-oss": "^6.7.0",
     "bulma-stylus": "0.8.0",
     "hexo": "^4.0.0",
     "hexo-component-inferno": "^0.2.4",
