@@ -4,7 +4,7 @@ version: 3.0.0
 variant: default
 # Path or URL to the website's logo
 logo: /img/logo.svg
-author: Zhenbin Wu
+author: Zhenbin Wu 赣ICP备19003237号-1
 # Page metadata configurations
 head:
     # URL or path to the website's icon
