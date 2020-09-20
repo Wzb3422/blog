@@ -27,8 +27,8 @@ jobs:
       uses: fangbinwei/aliyun-oss-website-action@v1
       with:
         folder: public
-        accessKeyId: ${{ secrets.ACCESSKEYSECRET }}
-        accessKeySecret: ${{ secrets.ACCESSKEYID }}
+        accessKeyId: ${{ secrets.ACCESSKEYID }}
+        accessKeySecret: ${{ secrets.ACCESSKEYSECRET }}
         bucket: wzb-blog
         endpoint: oss-cn-shanghai.aliyuncs.com
         skipSetting: true
