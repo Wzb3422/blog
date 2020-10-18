@@ -7,13 +7,13 @@ title: Wzb's Blog
 subtitle: Code just for fun
 description: ''
 keywords:
-author: Zhenbin Wu 赣ICP备19003237号-1
+author: Zhenbin Wu 赣ICP备19003237号-2
 language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blog.wzbspace.top
+url: https://blog.zebwu.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
