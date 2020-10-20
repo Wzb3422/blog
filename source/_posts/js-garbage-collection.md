@@ -1,7 +1,7 @@
 ---
 title: JavaScript 之 「垃圾回收机制」
 keywords: JavaScript
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200510102418.png'
+thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/trash0sdf0sad0.png'
 tags: 垃圾回收
 categories:
   - JavaScript
