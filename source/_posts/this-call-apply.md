@@ -1,7 +1,6 @@
 ---
 title: 🐣this、call 和 apply
 keywords: JavaScript
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/whatisthisdas1319sdvn2.png'
 tags: JavaScript
 categories:
   - JavaScript

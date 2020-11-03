@@ -1,7 +1,6 @@
 ---
 title: ❓ 有符号二进制数的表示
 keywords: Binary
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200511142715.png'
 tags: Binary Code Representation
 categories:
   - Basics

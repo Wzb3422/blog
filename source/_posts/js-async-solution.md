@@ -1,7 +1,7 @@
 ---
 title: JavaScript 之 「异步解决方案」
 keywords: JavaScript
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200510145459.png'
+thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/bildinasdiojv2321zdxa.png'
 tags: 对象
 categories:
   - JavaScript

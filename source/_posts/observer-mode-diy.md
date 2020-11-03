@@ -1,7 +1,6 @@
 ---
 title: 👀手动实现一个观察者模式
 keywords: JavaScript
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200510104845.png'
 tags: 对象
 categories:
   - JavaScript

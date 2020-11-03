@@ -1,7 +1,6 @@
 ---
 title: 🀄️CSS 居中大集合
 keywords: CSS Centering
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200511143058.png'
 tags: CSS Centering
 categories:
   - CSS

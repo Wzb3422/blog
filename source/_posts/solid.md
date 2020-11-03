@@ -1,7 +1,7 @@
 ---
 title: ✊SOLID 设计五大原则
 keywords: Design Pattern
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200511141851.png'
+# thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/artasda123sad214fsda5.png'
 tags: SOLID
 categories:
   - Design Pattern

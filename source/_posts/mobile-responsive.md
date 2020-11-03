@@ -1,7 +1,6 @@
 ---
 title: 📱移动端适配
 keywords: Mobile Web
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200511142224.png'
 tags: Responsive Web
 categories:
   - CSS

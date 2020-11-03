@@ -1,7 +1,6 @@
 ---
 title: 🏠CSS 盒模型与外边距合并
 keywords: CSS Boxing
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200511143248.png'
 tags: CSS Box
 categories:
   - CSS

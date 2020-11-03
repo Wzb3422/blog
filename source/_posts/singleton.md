@@ -1,7 +1,6 @@
 ---
 title: 🕴🏻单例模式
 keywords: Design Pattern
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200511161033.png'
 tags: Design Pattern
 categories:
   - Design Pattern

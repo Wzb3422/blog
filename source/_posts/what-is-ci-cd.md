@@ -1,7 +1,7 @@
 ---
 title: 👷‍♂️什么是持续集成、持续交付、持续部署？
 keywords: JavaScript
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200511140912.png'
+thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/ciworkdi9indasj.png'
 tags: 前端工程化
 categories:
   - JavaScript

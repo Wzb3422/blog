@@ -1,7 +1,7 @@
 ---
 title: JavaScript 之 「对象的创建与继承」
 keywords: JavaScript
-thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20200510104845.png'
+thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/extencfalmyksyanc.png'
 tags: 对象
 categories:
   - JavaScript
