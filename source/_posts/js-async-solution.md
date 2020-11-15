@@ -1,5 +1,5 @@
 ---
-title: JavaScript 之 「异步解决方案」
+title: Asynchronous JavaScript in Depth
 keywords: JavaScript
 thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/bildinasdiojv2321zdxa.png'
 tags: 对象
