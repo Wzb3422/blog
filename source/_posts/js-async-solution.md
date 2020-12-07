@@ -1,5 +1,5 @@
 ---
-title: Asynchronous JavaScript in Depth
+title: JavaScript 异步问题解决方案
 keywords: JavaScript
 thumbnail: 'https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/bildinasdiojv2321zdxa.png'
 tags: 对象
@@ -8,8 +8,8 @@ categories:
 date: 2020-05-10 14:20:56
 ---
 
-我们知道 JavaScript 语言是单线程的。也就是一次只能执行一个任务。如果有多个任务，就必须排队，前一个完成， 再执行下一个。但是，若是有一个耗时较长，后面所有的任务都必须排队等待，会拖慢整个程序的运行。常见的是浏览器的假死。
-为了解决这个问题，JavaScript 将任务的执行模式分为同步任务与异步任务。本文主要聊聊在 JavaScript 中的异步解决方案。
+我们知道 JavaScript 语言是单线程的。也就是一次只能执行一个任务。如果有多个任务，就必须排队，前一个完成， 再执行下一个。但是，若是有一个耗时较长，后面所有的任务都必须排队等待，会拖慢整个程序的运行。常见的是浏览器的阻塞。
+为了解决这个问题，JavaScript 任务分为同步任务与异步任务。本文聊聊 JavaScript 中的异步问题解决方案。
 
 <!-- MORE -->
 
@@ -38,13 +38,13 @@ ajax(url1, res1 => {
 })
 ```
 
-回调函数的优点是，简单、易理解和实现，但是不利于代码的阅读与维护。各个部分之间耦合混乱，流程难以追踪。而且，每个任务只能指定一个回调函数。它也不能使用 try catch 捕获错误，不能直接 return 。
+回调函数的优点是，简单、易理解和实现，但是不利于代码的阅读与维护。各个部分之间耦合混乱，流程难以追踪。而且，每个任务只能指定一个回调函数。它也不能使用 `try catch` 捕获错误，不能直接 `return` 。
 
 ## 事件监听
 
 在此模式下，异步任务的执行不取决于代码的顺序，而取决于某个事件是否发生。
 
-下面是两个函数，意图是想让 fn2 在 fn1 执行结束后执行。我们为它绑定了一个事件。（这里是 JQuery 写法）
+下面是两个函数，意图是想让 `fn2` 在 `fn1` 执行结束后执行。我们为它绑定了一个事件。（这里是 JQuery 写法）
 
 ```js
 fn1.on('done', fn2);
@@ -75,8 +75,44 @@ function f1() {
 
 ## Promise
 
-关于 Promise 的更多看这里。
+`Promise` 代表一个异步任务的状态。
 
+> 关于 Promise 的更多介绍请看[这里](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+
+### 链式调用
+
+链式调用的 `Promise` 能很好的解决「回调地狱」的问题。将前文回调地狱代码改写成这样。
+
+```js
+ajax(url1)
+  .then({ data } => {
+    // 处理逻辑
+    return ajax(url2);
+  })
+  .then({ data } => {{
+    // 处理逻辑
+    return ajax(url3);
+  }})
+  .then({ data } => {{
+    // 处理逻辑
+  }})
+  .catch(err => {
+    // 错误处理
+  })
+```
+
+我这里使用了在 `then()` 方法中直接返回一个新 Promise 对象的写法。
+
+优点：
++ 解决 Callback Hell 的问题
++ 代码扁平，可读性更高
++ 可以通过 `catch()` 进行错误捕获
+
+缺点：
++ 无法取消，一旦创建它就会立刻执行，无法中途取消。
++ 当处于 pending 状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。
+
+> 推荐阅读：[Promise A+ 规范](https://promisesaplus.com)
 ## Generator
 
 Generator 函数是 ES 6 提供的一种异步解决方案，行为与传统函数不提供。它的最大特点就是可以控制函数的执行。
@@ -174,4 +210,3 @@ async function readAll(params) {
 ## 总结
 
 JavaScript 异步编程进化史：callback => promise => generator => async / await
-
