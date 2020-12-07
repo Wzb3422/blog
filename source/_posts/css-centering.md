@@ -5,9 +5,10 @@ tags: CSS Centering
 categories:
   - CSS
 date: 2019-06-06 09:37:56
+thumbnail: https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/1607355807299.png
 ---
 
-「居中」是进行布局时最常见的需求之一了。CSS 有多种居中的方式，在什么时候挑选适合的方案？是一个值得思考的问题。
+「居中」是进行布局时最常见的需求之一了。CSS 有多种居中的方式，总结一下。
 
 <!-- MORE -->
 
@@ -56,13 +57,13 @@ date: 2019-06-06 09:37:56
 }
 ```
 
-
+![](https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20201207235124.png)
 
 如果没有给定块级元素宽度？那它会充满整行，以至于不需要居中了... 🔨
 
 就像这样
 
-
+![](https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/20201207235200.png)
 
 ### 如果有多个块级元素？
 
@@ -79,8 +80,6 @@ date: 2019-06-06 09:37:56
 }
 ```
 
-
-
 - 使用 Flexbox
 
 ```css
@@ -90,9 +89,7 @@ date: 2019-06-06 09:37:56
 }
 ```
 
-
-
-## 在竖直方向上的居中（Vertically Centering）
+## 在垂直方向上的居中（Vertically Centering）
 
 ### 对于行内（inline / inline-* ）元素
 
@@ -109,8 +106,6 @@ a {
 }
 ```
 
-
-
 - 还有一种方案是，将文字的行高值设置与其元素高度相同。
 
 ```css
@@ -119,12 +114,7 @@ a {
   line-height: 60px;
 }
 ```
-
-
-
 仔细思考，如果文字的内容超过一行，或者是父级元素的大小在响应式变化的情况下变小导致文字需要换行，会出现这样的情况。
-
-
 
 解决这个问题，只需要设置文字不换行即可
 
@@ -135,8 +125,6 @@ a {
   white-space: nowarp;
 }
 ```
-
-
 
 #### 有多行文字时
 
