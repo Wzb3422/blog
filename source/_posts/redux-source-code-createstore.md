@@ -28,11 +28,11 @@ export {
 }
 ```
 
-除了最后一个 `__DO_NOT_USE__ActionTypes` 都很熟悉。本篇从 `createStore` 开始。
+看，都是熟悉的 API。本篇从 `createStore` 开始。
 
 ## 阅读源码之前
 
-在阅读 `createStore` 之前，我们回顾一下 [Redux 文档中对 `createStore`讲解](https://redux.js.org/api/createstore)。
+在阅读 `createStore` 之前，我们回顾一下 [Redux 文档中对 `createStore` 讲解](https://redux.js.org/api/createstore)。
 
 官方示例
 
