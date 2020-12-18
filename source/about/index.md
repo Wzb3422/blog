@@ -8,7 +8,9 @@ comments: false
 
 ## Hey I'm ZebWu
 
-Frontend rookie, junior undergraduate in a 211 Univ. in PRC.
+Frontend rookie, junior in a 211 Univ. in PRC.
+
+Currently remote front End Dev at [@Repomono](https://repomono.com)
 
 Worked in [@Tecent](https://www.tencent.com) [@NCUHOME](https://team.ncuos.com)
 
