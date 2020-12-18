@@ -18,5 +18,4 @@ Looking for internship, feel free to reach me out.
 
 + Email: wzb3422@gmail.com
 + Wechat: heyzebwu
-+ [Resume](https://resume.zebwu.com)
 + [GitHub](https://github.com/Wzb3422)
