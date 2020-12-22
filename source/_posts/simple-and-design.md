@@ -3,7 +3,7 @@ title: 什么是简单？什么是设计？
 date: 2020-12-22 15:05:45
 tags: Design
 keywords: Design
-thumbnail: https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/1608620991112.png)
+thumbnail: https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/1608620991112.png
 categories:
 ---
 
