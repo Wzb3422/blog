@@ -1,10 +1,10 @@
 ---
 title: 2020 年终总结 - Life Changing
 date: 2020-12-29 21:28:03
-tags:
-keywords:
-thumbnail:
-categories:
+tags: Summary
+keywords: Summary
+thumbnail: https://wzb-img-base.oss-cn-shanghai.aliyuncs.com/img/dsfanhkldfsadklnfnilky27p8923pmuiox.png
+categories: Summary
 ---
 
 2020 年，经历了 COVID 与其引发的一系列生活的变化，意料之外地去了腾讯。这一年，对于我来说，it's life changing.
