@@ -10,9 +10,7 @@ comments: false
 
 Frontend rookie, junior in a 211 Univ. in PRC.
 
-Currently remote front End Dev at [@Repomono](https://repomono.com)
-
-Worked in [@Tecent](https://www.tencent.com) [@NCUHOME](https://team.ncuos.com)
+Worked [@Repomono](https://repomono.com) [@Tecent](https://www.tencent.com) [@NCUHOME](https://team.ncuos.com)
 
 Looking for internship, feel free to reach me out.
 
