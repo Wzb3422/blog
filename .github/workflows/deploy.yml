@@ -21,14 +21,11 @@ jobs:
         npm install
         echo build project
         npm run build
-      env:
-         CI: false
-    - name: aliyun-oss-website-action
-      uses: fangbinwei/aliyun-oss-website-action@v1
+    - name: ali-oss-website-action
+      uses: ncuhome/ali-oss-website-action@v1.0.0
       with:
         folder: public
         accessKeyId: ${{ secrets.ACCESSKEYID }}
         accessKeySecret: ${{ secrets.ACCESSKEYSECRET }}
         bucket: wzb-blog
         endpoint: oss-cn-shanghai.aliyuncs.com
-        skipSetting: true
